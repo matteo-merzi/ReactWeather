@@ -27,23 +27,23 @@
 // });
 
 function addPromise(a, b) {
-	return new Promise(function(resolve, reject) {
-		if (typeof a === 'number' && typeof b === 'number') {
-			resolve(a + b);
-		} else {
-			reject('Incorrect parameters');
-		}
-	});
+  return new Promise(function(resolve, reject) {
+    if (typeof a === 'number' && typeof b === 'number') {
+      resolve(a + b);
+    } else {
+      reject('Incorrect parameters');
+    }
+  });
 }
 
 addPromise(2, 5).then(function(sum) {
-	console.log('promise success', sum);
+  console.log('promise success', sum);
 }, function(err) {
-	console.log('promise error', err);
+  console.log('promise error', err);
 })
 
 addPromise(2, 'asd').then(function(sum) {
-	console.log('promise success', sum);
+  console.log('promise success', sum);
 }, function(err) {
-	console.log('promise error', err);
+  console.log('promise error', err);
 })
